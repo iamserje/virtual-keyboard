@@ -30,6 +30,7 @@ body {
    line-height: 34px;
    color: #c37f7f;
 }
+
 .textarea {
    display: block;
    width: 995px;
@@ -49,6 +50,7 @@ body {
    border: 3px solid #1c1e22;
    border-radius: 5px;
 }
+
 .keyboard__row {
    display: flex;
    flex-wrap: nowrap;
@@ -57,6 +59,7 @@ body {
    height: 55px;
    margin-bottom: 10px;
 }
+
 .keyboard__key {
    width: 55px;
    height: 55px;
@@ -70,16 +73,10 @@ body {
    transition: 0.3s;
    box-shadow: 3px 3px 3px #242424;
 }
+
 .keyboard__key:active {
    box-shadow: none;
    background: #8d79f3;
-}
-
-.hidden {
-   display: none;
-}
-.tilda {
-   margin-left: 5px;
 }
 
 .lower {
@@ -93,6 +90,18 @@ body {
 .en {
 }
 .rus {
+}
+
+.hidden {
+   display: none;
+}
+
+.active {
+   box-shadow: none;
+   background: #8d79f3;
+}
+.tilda {
+   margin-left: 5px;
 }
 
 .backspase {

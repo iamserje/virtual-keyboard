@@ -1,0 +1,35 @@
+import { createComponent } from "./create-element.js";
+import { createKeyboard } from "./create-keyboard.js";
+
+export function createPage(parent) {
+   const container = createComponent('div', {
+      className: 'container'
+   });
+
+   const title = createComponent('h1', {
+      className: 'title',
+      textContent: 'Virtual-keyboard'
+   });
+
+   const textarea = createComponent('textarea', {
+      className: 'textarea',
+      id: 'keytext',
+      cols: '50',
+      rows: '10'
+   });
+
+   const keyboardObject = createKeyboard();
+
+   const textOS = createComponent('p', {
+      className: 'os',
+      textContent: 'Keyboard made in Linux (windows) OS'
+   });
+
+   const textLang = createComponent('p', {
+      className: 'lang',
+      textContent: 'For change language - LeftShift+LeftAlt'
+   });
+   container.append(title, textarea, keyboardObject, textOS, textLang);
+   parent.append(container);
+   return keyboardObject;
+}
