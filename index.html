@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js" type="module"></script>
+   <title>virtual-keyboard</title>
+</head>
+<body>
+   <div class="container">
+      <h1 class="title">Virtual-keyboard</h1>
+      <textarea class="textarea" id="keytext" cols="50" rows="10"></textarea>
+      <div class="keyboard">
+         <div class="keyboard__row">
+               <div class="keyboard__key tilda">
+                  <div class="en">
+                     <span class="lower">`</span><span class="up hidden">~</span><span class="shift hidden">~</span><span class="caps hidden">`</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">ё</span><span class="up hidden">Ё</span><span class="shift hidden">Ё</span><span class="caps hidden">Ё</span>
+                  </div>
+               </div>
+               <div class="keyboard__key digit1">
+                  <div class="en">
+                     <span class="lower">1</span>
+                     <span class="up hidden">!</span>
+                     <span class="shift hidden">!</span>
+                     <span class="caps hidden">1</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">1</span>
+                     <span class="up hidden">!</span>
+                     <span class="shift hidden">!</span>
+                     <span class="caps hidden">1</span>
+                  </div>
+               </div>
+               <div class="keyboard__key digit2">
+                  <div class="en">
+                     <span class="lower">2</span>
+                     <span class="up hidden">@</span>
+                     <span class="shift hidden">@</span>
+                     <span class="caps hidden">2</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">2</span>
+                     <span class="up hidden">"</span>
+                     <span class="shift hidden">"</span>
+                     <span class="caps hidden">2</span>
+                  </div>
+               </div>
+               <div class="keyboard__key digit3">
+                  <div class="en">
+                     <span class="lower">3</span>
+                     <span class="up hidden">#</span>
+                     <span class="shift hidden">#</span>
+                     <span class="caps hidden">3</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">3</span>
+                     <span class="up hidden">№</span>
+                     <span class="shift hidden">№</span>
+                     <span class="caps hidden">3</span>
+                  </div>
+               </div>
+               <div class="keyboard__key digit4">
+                  <div class="en">
+                     <span class="lower">4</span>
+                     <span class="up hidden">$</span>
+                     <span class="shift hidden">$</span>
+                     <span class="caps hidden">4</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">4</span>
+                     <span class="up hidden">;</span>
+                     <span class="shift hidden">;</span>
+                     <span class="caps hidden">4</span>
+                  </div>
+               </div>
+               <div class="keyboard__key digit5">
+                  <div class="en">
+                     <span class="lower">5</span>
+                     <span class="up hidden">%</span>
+                     <span class="shift hidden">%</span>
+                     <span class="caps hidden">5</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">5</span>
+                     <span class="up hidden">%</span>
+                     <span class="shift hidden">%</span>
+                     <span class="caps hidden">5</span>
+                  </div>
+               </div>
+               <div class="keyboard__key digit6">
+                  <div class="en">
+                     <span class="lower">6</span>
+                     <span class="up hidden">^</span>
+                     <span class="shift hidden">^</span>
+                     <span class="caps hidden">6</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">6</span>
+                     <span class="up hidden">:</span>
+                     <span class="shift hidden">:</span>
+                     <span class="caps hidden">6</span>
+                  </div>
+               </div>
+               <div class="keyboard__key digit7">
+                  <div class="en">
+                     <span class="lower">7</span>
+                     <span class="up hidden">&</span>
+                     <span class="shift hidden">&</span>
+                     <span class="caps hidden">7</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">7</span>
+                     <span class="up hidden">?</span>
+                     <span class="shift hidden">?</span>
+                     <span class="caps hidden">7</span>
+                  </div>
+               </div>
+               <div class="keyboard__key digit8">
+                   <div class="en">
+                     <span class="lower">8</span>
+                     <span class="up hidden">*</span>
+                     <span class="shift hidden">*</span>
+                     <span class="caps hidden">8</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">8</span>
+                     <span class="up hidden">*</span>
+                     <span class="shift hidden">*</span>
+                     <span class="caps hidden">8</span>
+                  </div>
+               </div>
+               <div class="keyboard__key digit9">
+                   <div class="en">
+                     <span class="lower">9</span>
+                     <span class="up hidden">(</span>
+                     <span class="shift hidden">(</span>
+                     <span class="caps hidden">9</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">9</span>
+                     <span class="up hidden">(</span>
+                     <span class="shift hidden">(</span>
+                     <span class="caps hidden">9</span>
+                  </div>
+               </div>
+               <div class="keyboard__key digit0">
+                   <div class="en">
+                     <span class="lower">0</span>
+                     <span class="up hidden">)</span>
+                     <span class="shift hidden">)</span>
+                     <span class="caps hidden">0</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">0</span>
+                     <span class="up hidden">)</span>
+                     <span class="shift hidden">)</span>
+                     <span class="caps hidden">0</span>
+                  </div>
+               </div>
+               <div class="keyboard__key minus">
+                   <div class="en">
+                     <span class="lower">-</span>
+                     <span class="up hidden">_</span>
+                     <span class="shift hidden">_</span>
+                     <span class="caps hidden">-</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">-</span>
+                     <span class="up hidden">_</span>
+                     <span class="shift hidden">_</span>
+                     <span class="caps hidden">-</span>
+                  </div>
+               </div>
+               <div class="keyboard__key equal">
+                   <div class="en">
+                     <span class="lower">=</span>
+                     <span class="up hidden">+</span>
+                     <span class="shift hidden">+</span>
+                     <span class="caps hidden">=</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">=</span>
+                     <span class="up hidden">+</span>
+                     <span class="shift hidden">+</span>
+                     <span class="caps hidden">=</span>
+                  </div>
+               </div>
+               <div class="keyboard__key backspase">
+                  <div class="en">
+                     <span class="lower">Backspase</span>
+                     <span class="up hidden">Backspase</span>
+                     <span class="shift hidden">Backspase</span>
+                     <span class="caps hidden">Backspase</span>
+                  </div>
+                  <div class="en">
+                     <span class="lower hidden">Backspase</span>
+                     <span class="up hidden">Backspase</span>
+                     <span class="shift hidden">Backspase</span>
+                     <span class="caps hidden">Backspase</span>
+                  </div>
+               </div>
+         </div>
+         <div class="keyboard__row">
+               <div class="keyboard__key tab">
+                  <div class="en">
+                     <span class="lower">Tab</span>
+                     <span class="up hidden">Tab</span>
+                     <span class="shift hidden">Tab</span>
+                     <span class="caps hidden">Tab</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">Tab</span>
+                     <span class="up hidden">Tab</span>
+                     <span class="shift hidden">Tab</span>
+                     <span class="caps hidden">Tab</span>
+                  </div>
+               </div>
+               <div class="keyboard__key q">
+                  <div class="en">
+                     <span class="lower">q</span>
+                     <span class="up hidden">Q</span>
+                     <span class="shift hidden">Q</span>
+                     <span class="caps hidden">Q</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">й</span>
+                     <span class="up hidden">Й</span>
+                     <span class="shift hidden">Й</span>
+                     <span class="caps hidden">Й</span>
+                  </div>
+               </div>
+               <div class="keyboard__key w">
+                  <div class="en">
+                     <span class="lower">w</span>
+                     <span class="up hidden">W</span>
+                     <span class="shift hidden">W</span>
+                     <span class="caps hidden">W</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">ц</span>
+                     <span class="up hidden">Ц</span>
+                     <span class="shift hidden">Ц</span>
+                     <span class="caps hidden">Ц</span>
+                  </div>
+               </div>
+               <div class="keyboard__key e">
+                  <div class="en">
+                     <span class="lower">e</span>
+                     <span class="up hidden">E</span>
+                     <span class="shift hidden">E</span>
+                     <span class="caps hidden">E</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">у</span>
+                     <span class="up hidden">У</span>
+                     <span class="shift hidden">У</span>
+                     <span class="caps hidden">У</span>
+                  </div>
+               </div>
+               <div class="keyboard__key r">
+                  <div class="en">
+                     <span class="lower">r</span>
+                     <span class="up hidden">R</span>
+                     <span class="shift hidden">R</span>
+                     <span class="caps hidden">R</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">к</span>
+                     <span class="up hidden">К</span>
+                     <span class="shift hidden">К</span>
+                     <span class="caps hidden">К</span>
+                  </div>
+               </div>
+               <div class="keyboard__key t">
+                  <div class="en">
+                     <span class="lower">t</span>
+                     <span class="up hidden">T</span>
+                     <span class="shift hidden">T</span>
+                     <span class="caps hidden">T</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">е</span>
+                     <span class="up hidden">Е</span>
+                     <span class="shift hidden">Е</span>
+                     <span class="caps hidden">Е</span>
+                  </div>
+               </div>
+               <div class="keyboard__key y">
+                  <div class="en">
+                     <span class="lower">y</span>
+                     <span class="up hidden">Y</span>
+                     <span class="shift hidden">Y</span>
+                     <span class="caps hidden">Y</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">н</span>
+                     <span class="up hidden">Н</span>
+                     <span class="shift hidden">Н</span>
+                     <span class="caps hidden">Н</span>
+                  </div>
+               </div>
+               <div class="keyboard__key u">
+                  <div class="en">
+                     <span class="lower">u</span>
+                     <span class="up hidden">U</span>
+                     <span class="shift hidden">U</span>
+                     <span class="caps hidden">U</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">г</span>
+                     <span class="up hidden">Г</span>
+                     <span class="shift hidden">Г</span>
+                     <span class="caps hidden">Г</span>
+                  </div>
+               </div>
+               <div class="keyboard__key i">
+                   <div class="en">
+                     <span class="lower">i</span>
+                     <span class="up hidden">I</span>
+                     <span class="shift hidden">I</span>
+                     <span class="caps hidden">I</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">ш</span>
+                     <span class="up hidden">Ш</span>
+                     <span class="shift hidden">Ш</span>
+                     <span class="caps hidden">Ш</span>
+                  </div>
+               </div>
+               <div class="keyboard__key o">
+                   <div class="en">
+                     <span class="lower">o</span>
+                     <span class="up hidden">O</span>
+                     <span class="shift hidden">O</span>
+                     <span class="caps hidden">O</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">щ</span>
+                     <span class="up hidden">Щ</span>
+                     <span class="shift hidden">Щ</span>
+                     <span class="caps hidden">Щ</span>
+                  </div>
+               </div>
+               <div class="keyboard__key p">
+                   <div class="en">
+                     <span class="lower">p</span>
+                     <span class="up hidden">P</span>
+                     <span class="shift hidden">P</span>
+                     <span class="caps hidden">P</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">з</span>
+                     <span class="up hidden">З</span>
+                     <span class="shift hidden">З</span>
+                     <span class="caps hidden">З</span>
+                  </div>
+               </div>
+               <div class="keyboard__key brackets-open">
+                   <div class="en">
+                     <span class="lower">[</span>
+                     <span class="up hidden">{</span>
+                     <span class="shift hidden">{</span>
+                     <span class="caps hidden">[</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">х</span>
+                     <span class="up hidden">Х</span>
+                     <span class="shift hidden">Х</span>
+                     <span class="caps hidden">Х</span>
+                  </div>
+               </div>
+               <div class="keyboard__key brasckets-close">
+                   <div class="en">
+                     <span class="lower">]</span>
+                     <span class="up hidden">}</span>
+                     <span class="shift hidden">}</span>
+                     <span class="caps hidden">]</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">ъ</span>
+                     <span class="up hidden">Ъ</span>
+                     <span class="shift hidden">Ъ</span>
+                     <span class="caps hidden">Ъ</span>
+                  </div>
+               </div>
+               <div class="keyboard__key backslash">
+                  <div class="en">
+                     <span class="lower">\</span>
+                     <span class="up hidden">|</span>
+                     <span class="shift hidden">|</span>
+                     <span class="caps hidden">\</span>
+                  </div>
+                  <div class="en">
+                     <span class="lower">\</span>
+                     <span class="up hidden">/</span>
+                     <span class="shift hidden">/</span>
+                     <span class="caps hidden">\</span>
+                  </div>
+               </div>
+               <div class="keyboard__key del">
+                  <div class="en">
+                     <span class="lower">Del</span>
+                     <span class="up hidden">Del</span>
+                     <span class="shift hidden">Del</span>
+                     <span class="caps hidden">Del</span>
+                  </div>
+                  <div class="en">
+                     <span class="lower">Del</span>
+                     <span class="up hidden">Del</span>
+                     <span class="shift hidden">Del</span>
+                     <span class="caps hidden">Del</span>
+                  </div>
+               </div>
+         </div>
+         <div class="keyboard__row">
+               <div class="keyboard__key capsLock">
+                  <div class="en">
+                     <span class="lower">CapsLock</span>
+                     <span class="up hidden">CapsLock</span>
+                     <span class="shift hidden">CapsLock</span>
+                     <span class="caps hidden">CapsLock</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">CapsLock</span>
+                     <span class="up hidden">CapsLock</span>
+                     <span class="shift hidden">CapsLock</span>
+                     <span class="caps hidden">CapsLock</span>
+                  </div>
+               </div>
+               <div class="keyboard__key a">
+                  <div class="en">
+                     <span class="lower">a</span>
+                     <span class="up hidden">A</span>
+                     <span class="shift hidden">A</span>
+                     <span class="caps hidden">A</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">ф</span>
+                     <span class="up hidden">Ф</span>
+                     <span class="shift hidden">Ф</span>
+                     <span class="caps hidden">Ф</span>
+                  </div>
+               </div>
+               <div class="keyboard__key s">
+                  <div class="en">
+                     <span class="lower">s</span>
+                     <span class="up hidden">S</span>
+                     <span class="shift hidden">S</span>
+                     <span class="caps hidden">S</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">ы</span>
+                     <span class="up hidden">Ы</span>
+                     <span class="shift hidden">Ы</span>
+                     <span class="caps hidden">Ы</span>
+                  </div>
+               </div>
+               <div class="keyboard__key d">
+                  <div class="en">
+                     <span class="lower">d</span>
+                     <span class="up hidden">D</span>
+                     <span class="shift hidden">D</span>
+                     <span class="caps hidden">D</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">в</span>
+                     <span class="up hidden">В</span>
+                     <span class="shift hidden">В</span>
+                     <span class="caps hidden">В</span>
+                  </div>
+               </div>
+               <div class="keyboard__key f">
+                  <div class="en">
+                     <span class="lower">f</span>
+                     <span class="up hidden">F</span>
+                     <span class="shift hidden">F</span>
+                     <span class="caps hidden">F</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">а</span>
+                     <span class="up hidden">А</span>
+                     <span class="shift hidden">А</span>
+                     <span class="caps hidden">А</span>
+                  </div>
+               </div>
+               <div class="keyboard__key g">
+                  <div class="en">
+                     <span class="lower">g</span>
+                     <span class="up hidden">G</span>
+                     <span class="shift hidden">G</span>
+                     <span class="caps hidden">G</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">п</span>
+                     <span class="up hidden">П</span>
+                     <span class="shift hidden">П</span>
+                     <span class="caps hidden">П</span>
+                  </div>
+               </div>
+               <div class="keyboard__key h">
+                  <div class="en">
+                     <span class="lower">h</span>
+                     <span class="up hidden">H</span>
+                     <span class="shift hidden">H</span>
+                     <span class="caps hidden">H</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">р</span>
+                     <span class="up hidden">Р</span>
+                     <span class="shift hidden">Р</span>
+                     <span class="caps hidden">Р</span>
+                  </div>
+               </div>
+               <div class="keyboard__key j">
+                  <div class="en">
+                     <span class="lower">j</span>
+                     <span class="up hidden">J</span>
+                     <span class="shift hidden">J</span>
+                     <span class="caps hidden">J</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">о</span>
+                     <span class="up hidden">О</span>
+                     <span class="shift hidden">О</span>
+                     <span class="caps hidden">О</span>
+                  </div>
+               </div>
+               <div class="keyboard__key k">
+                   <div class="en">
+                     <span class="lower">k</span>
+                     <span class="up hidden">K</span>
+                     <span class="shift hidden">K</span>
+                     <span class="caps hidden">K</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">л</span>
+                     <span class="up hidden">Л</span>
+                     <span class="shift hidden">Л</span>
+                     <span class="caps hidden">Л</span>
+                  </div>
+               </div>
+               <div class="keyboard__key l">
+                   <div class="en">
+                     <span class="lower">l</span>
+                     <span class="up hidden">L</span>
+                     <span class="shift hidden">L</span>
+                     <span class="caps hidden">L</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">д</span>
+                     <span class="up hidden">Д</span>
+                     <span class="shift hidden">Д</span>
+                     <span class="caps hidden">Д</span>
+                  </div>
+               </div>
+               <div class="keyboard__key semicolon">
+                   <div class="en">
+                     <span class="lower">;</span>
+                     <span class="up hidden">:</span>
+                     <span class="shift hidden">:</span>
+                     <span class="caps hidden">;</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">ж</span>
+                     <span class="up hidden">Ж</span>
+                     <span class="shift hidden">Ж</span>
+                     <span class="caps hidden">Ж</span>
+                  </div>
+               </div>
+               <div class="keyboard__key kav">
+                   <div class="en">
+                     <span class="lower">'</span>
+                     <span class="up hidden">"</span>
+                     <span class="shift hidden">"</span>
+                     <span class="caps hidden">'</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">э</span>
+                     <span class="up hidden">Э</span>
+                     <span class="shift hidden">Э</span>
+                     <span class="caps hidden">Э</span>
+                  </div>
+               </div>
+               <div class="keyboard__key enter">
+                   <div class="en">
+                     <span class="lower">Enter</span>
+                     <span class="up hidden">Enter</span>
+                     <span class="shift hidden">Enter</span>
+                     <span class="caps hidden">Enter</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">Enter</span>
+                     <span class="up hidden">Enter</span>
+                     <span class="shift hidden">Enter</span>
+                     <span class="caps hidden">Enter</span>
+                  </div>
+               </div>
+         </div>
+         <div class="keyboard__row">
+               <div class="keyboard__key shift-left">
+                  <div class="en">
+                     <span class="lower">Shift</span>
+                     <span class="up hidden">Shift</span>
+                     <span class="shift hidden">Shift</span>
+                     <span class="caps hidden">Shift</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">Shift</span>
+                     <span class="up hidden">Shift</span>
+                     <span class="shift hidden">Shift</span>
+                     <span class="caps hidden">Shift</span>
+                  </div>
+               </div>
+               <div class="keyboard__key z">
+                  <div class="en">
+                     <span class="lower">z</span>
+                     <span class="up hidden">Z</span>
+                     <span class="shift hidden">Z</span>
+                     <span class="caps hidden">Z</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">я</span>
+                     <span class="up hidden">Я</span>
+                     <span class="shift hidden">Я</span>
+                     <span class="caps hidden">Я</span>
+                  </div>
+               </div>
+               <div class="keyboard__key x">
+                  <div class="en">
+                     <span class="lower">x</span>
+                     <span class="up hidden">X</span>
+                     <span class="shift hidden">X</span>
+                     <span class="caps hidden">X</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">ч</span>
+                     <span class="up hidden">Ч</span>
+                     <span class="shift hidden">Ч</span>
+                     <span class="caps hidden">Ч</span>
+                  </div>
+               </div>
+               <div class="keyboard__key c">
+                  <div class="en">
+                     <span class="lower">c</span>
+                     <span class="up hidden">C</span>
+                     <span class="shift hidden">C</span>
+                     <span class="caps hidden">C</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">с</span>
+                     <span class="up hidden">С</span>
+                     <span class="shift hidden">С</span>
+                     <span class="caps hidden">С</span>
+                  </div>
+               </div>
+               <div class="keyboard__key v">
+                  <div class="en">
+                     <span class="lower">v</span>
+                     <span class="up hidden">V</span>
+                     <span class="shift hidden">V</span>
+                     <span class="caps hidden">V</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">м</span>
+                     <span class="up hidden">М</span>
+                     <span class="shift hidden">М</span>
+                     <span class="caps hidden">М</span>
+                  </div>
+               </div>
+               <div class="keyboard__key b">
+                  <div class="en">
+                     <span class="lower">b</span>
+                     <span class="up hidden">B</span>
+                     <span class="shift hidden">B</span>
+                     <span class="caps hidden">B</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">и</span>
+                     <span class="up hidden">И</span>
+                     <span class="shift hidden">И</span>
+                     <span class="caps hidden">И</span>
+                  </div>
+               </div>
+               <div class="keyboard__key n">
+                  <div class="en">
+                     <span class="lower">n</span>
+                     <span class="up hidden">N</span>
+                     <span class="shift hidden">N</span>
+                     <span class="caps hidden">N</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">т</span>
+                     <span class="up hidden">Т</span>
+                     <span class="shift hidden">Т</span>
+                     <span class="caps hidden">Т</span>
+                  </div>
+               </div>
+               <div class="keyboard__key m">
+                  <div class="en">
+                     <span class="lower">m</span>
+                     <span class="up hidden">M</span>
+                     <span class="shift hidden">M</span>
+                     <span class="caps hidden">M</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">ь</span>
+                     <span class="up hidden">Ь</span>
+                     <span class="shift hidden">Ь</span>
+                     <span class="caps hidden">Ь</span>
+                  </div>
+               </div>
+               <div class="keyboard__key coma">
+                   <div class="en">
+                     <span class="lower">,</span>
+                     <span class="up hidden">&lt;</span>
+                     <span class="shift hidden">&lt;</span>
+                     <span class="caps hidden">,</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">б</span>
+                     <span class="up hidden">Б</span>
+                     <span class="shift hidden">Б</span>
+                     <span class="caps hidden">Б</span>
+                  </div>
+               </div>
+               <div class="keyboard__key dot">
+                   <div class="en">
+                     <span class="lower">.</span>
+                     <span class="up hidden">&rt;</span>
+                     <span class="shift hidden">&rt;</span>
+                     <span class="caps hidden">.</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">ю</span>
+                     <span class="up hidden">Ю</span>
+                     <span class="shift hidden">Ю</span>
+                     <span class="caps hidden">Ю</span>
+                  </div>
+               </div>
+               <div class="keyboard__key slash">
+                   <div class="en">
+                     <span class="lower">/</span>
+                     <span class="up hidden">?</span>
+                     <span class="shift hidden">?</span>
+                     <span class="caps hidden">/</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">.</span>
+                     <span class="up hidden">,</span>
+                     <span class="shift hidden">,</span>
+                     <span class="caps hidden">.</span>
+                  </div>
+               </div>
+               <div class="keyboard__key arrow-up">
+                  <div class="en">
+                    <span class="lower">▲</span>
+                    <span class="up hidden">▲</span>
+                    <span class="shift hidden">▲</span>
+                    <span class="caps hidden">▲</span>
+                 </div>
+                 <div class="rus">
+                    <span class="lower hidden">▲</span>
+                    <span class="up hidden">▲</span>
+                    <span class="shift hidden">▲</span>
+                    <span class="caps hidden">▲</span>
+                 </div>
+              </div>
+               <div class="keyboard__key shift-right">
+                   <div class="en">
+                     <span class="lower">Shift</span>
+                     <span class="up hidden">Shift</span>
+                     <span class="shift hidden">Shift</span>
+                     <span class="caps hidden">Shift</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">Shift</span>
+                     <span class="up hidden">Shift</span>
+                     <span class="shift hidden">Shift</span>
+                     <span class="caps hidden">Shift</span>
+                  </div>
+               </div>
+         </div>
+         <div class="keyboard__row">
+               <div class="keyboard__key ctrl-left">
+                  <div class="en">
+                     <span class="lower">Ctrl</span>
+                     <span class="up hidden">Ctrl</span>
+                     <span class="shift hidden">Ctrl</span>
+                     <span class="caps hidden">Ctrl</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">Ctrl</span>
+                     <span class="up hidden">Ctrl</span>
+                     <span class="shift hidden">Ctrl</span>
+                     <span class="caps hidden">Ctrl</span>
+                  </div>
+               </div>
+               <div class="keyboard__key win">
+                  <div class="en">
+                     <span class="lower">Win</span>
+                     <span class="up hidden">Win</span>
+                     <span class="shift hidden">Win</span>
+                     <span class="caps hidden">Win</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">Win</span>
+                     <span class="up hidden">Win</span>
+                     <span class="shift hidden">Win</span>
+                     <span class="caps hidden">Win</span>
+                  </div>
+               </div>
+               <div class="keyboard__key alt-left">
+                  <div class="en">
+                     <span class="lower">Alt</span>
+                     <span class="up hidden">Alt</span>
+                     <span class="shift hidden">Alt</span>
+                     <span class="caps hidden">Alt</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">Alt</span>
+                     <span class="up hidden">Alt</span>
+                     <span class="shift hidden">Alt</span>
+                     <span class="caps hidden">Alt</span>
+                  </div>
+               </div>
+               <div class="keyboard__key space">
+                  <div class="en">
+                     <span class="lower"> </span>
+                     <span class="up hidden"> </span>
+                     <span class="shift hidden"> </span>
+                     <span class="caps hidden"> </span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden"> </span>
+                     <span class="up hidden"> </span>
+                     <span class="shift hidden"> </span>
+                     <span class="caps hidden"> </span>
+                  </div>
+               </div>
+               <div class="keyboard__key alt-right">
+                  <div class="en">
+                     <span class="lower">Alt</span>
+                     <span class="up hidden">Alt</span>
+                     <span class="shift hidden">Alt</span>
+                     <span class="caps hidden">Alt</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">Alt</span>
+                     <span class="up hidden">Alt</span>
+                     <span class="shift hidden">Alt</span>
+                     <span class="caps hidden">Alt</span>
+                  </div>
+               </div>
+               <div class="keyboard__key arrow-left">
+                  <div class="en">
+                     <span class="lower">◄</span>
+                     <span class="up hidden">◄</span>
+                     <span class="shift hidden">◄</span>
+                     <span class="caps hidden">◄</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">◄</span>
+                     <span class="up hidden">◄</span>
+                     <span class="shift hidden">◄</span>
+                     <span class="caps hidden">◄</span>
+                  </div>
+               </div>
+               <div class="keyboard__key arrow-down">
+                  <div class="en">
+                     <span class="lower">▼</span>
+                     <span class="up hidden">▼</span>
+                     <span class="shift hidden">▼</span>
+                     <span class="caps hidden">▼</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">▼</span>
+                     <span class="up hidden">▼</span>
+                     <span class="shift hidden">▼</span>
+                     <span class="caps hidden">▼</span>
+                  </div>
+               </div>
+               <div class="keyboard__key arrow-right">
+                  <div class="en">
+                     <span class="lower">►</span>
+                     <span class="up hidden">►</span>
+                     <span class="shift hidden">►</span>
+                     <span class="caps hidden">►</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">►</span>
+                     <span class="up hidden">►</span>
+                     <span class="shift hidden">►</span>
+                     <span class="caps hidden">►</span>
+                  </div>
+               </div>
+               <div class="keyboard__key ctrl-right">
+                   <div class="en">
+                     <span class="lower">Ctrl</span>
+                     <span class="up hidden">Ctrl</span>
+                     <span class="shift hidden">Ctrl</span>
+                     <span class="caps hidden">Ctrl</span>
+                  </div>
+                  <div class="rus">
+                     <span class="lower hidden">Ctrl</span>
+                     <span class="up hidden">Ctrl</span>
+                     <span class="shift hidden">Ctrl</span>
+                     <span class="caps hidden">Ctrl</span>
+                  </div>
+               </div>
+         </div>
+      </div>
+      <p class="os">Keyboard made in Linux (windows) OS</p>
+      <p class="lang">For change language - LeftShift+LeftAlt</p>
+   </div>
+</body>
+</html>
