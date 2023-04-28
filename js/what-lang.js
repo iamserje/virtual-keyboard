@@ -1,4 +1,4 @@
-export function getLanguage() {
+
   const textarea = document.querySelector('.textarea');
   const rusLower = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
   const rusUpper = rusLower.toUpperCase();
@@ -7,16 +7,16 @@ export function getLanguage() {
   const rus = rusLower + rusUpper + '№';
   const en = enLower + enUpper + '@#$^';
 
-  const getChar = (event) => String.fromCharCode(event.keyCode || event.charCode)
+export let getLanguage = 'en';
+window.addEventListener('keypress', function(e) {
 
-  textarea.addEventListener('keypress', function (e) {
-    const char = getChar(e)
-    if (rus.includes(char)) {
-      return 'ru';
-    } else if (en.includes(char)) {
-      return 'en';
-    } else {
-      return 'ХЗ';
-    }
-  })
-}
+  if (rus.includes(e.key)) {
+    getLanguage = 'rus'
+  };
+  if (en.includes(e.key)) {
+    getLanguage = 'en'
+  };
+  console.log('1', getLanguage);
+});
+
+
