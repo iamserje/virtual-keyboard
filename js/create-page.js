@@ -2,11 +2,10 @@ import { createComponent } from "./create-element.js";
 import { createKeyboard } from "./create-keyboard.js";
 import { getLanguage } from "./what-lang.js";
 
-export function createPage(parent) {
+export function createPage(lang) {
    const container = createComponent('div', {
       className: 'container'
    });
-
 
    const title = createComponent('h1', {
       className: 'title',
@@ -20,7 +19,7 @@ export function createPage(parent) {
       rows: '10'
    });
 
-   const keyboardObject = createKeyboard(getLanguage);
+   const keyboardObject = createKeyboard(lang);
 
    const textOS = createComponent('p', {
       className: 'os',
@@ -32,6 +31,7 @@ export function createPage(parent) {
       textContent: 'For change language - LeftShift+LeftAlt'
    });
    container.append(title, textarea, keyboardObject, textOS, textLang);
-   parent.append(container);
+   document.body.append(container);
+   // console.log('Funkziya vipolnilasy')
    return keyboardObject;
 }

@@ -37,7 +37,7 @@ body {
    height: 200px;
    margin: 20px auto;
    padding: 10px;
-   font-size: 12px;
+   font-size: 16px;
    color: #242424;
 }
 
@@ -79,19 +79,6 @@ body {
    background: #8d79f3;
 }
 
-.lower {
-}
-.up {
-}
-.shift {
-}
-.caps {
-}
-.en {
-}
-.rus {
-}
-
 .hidden {
    display: none;
 }
@@ -100,71 +87,74 @@ body {
    box-shadow: none;
    background: #8d79f3;
 }
-.tilda {
+.Backquote {
    margin-left: 5px;
 }
 
-.backspase {
+.Backspace {
    width: 130px;
    background: #251b55;
 }
-.tab {
+.Tab {
    width: 65px;
    margin-left: 5px;
    background: #251b55;
 }
-.del {
+.Del {
    background: #251b55;
 }
-.capsLock {
+.CapsLock {
    width: 100px;
    margin-left: 5px;
    background: #251b55;
 }
-.enter {
+.Enter {
    width: 150px;
    background: #251b55;
 }
-.shift-left {
+.ShiftLeft {
    width: 130px;
    margin-left: 5px;
    background: #251b55;
 }
-.shift-right {
+.ShiftRight {
    width: 120px;
+   margin-left: 10px;
    background: #251b55;
 }
-.ctrl-left {
+.ControlLeft {
    margin-left: 5px;
    background: #251b55;
 }
-.ctrl-right {
+.ControlRight {
+   margin-left: 10px;
    background: #251b55;
 }
-.alt-left {
+.AltLeft {
    background: #251b55;
 }
-.alt-right {
+.AltRight {
+   margin-left: 10px;
    background: #251b55;
 }
-.win {
+.MetaLeft {
    background: #251b55;
 }
-.space {
+.Space {
    width: 455px;
    background: #4c4085;
 }
 
-.arrow-up {
+.ArrowUp {
    background: #251b55;
 }
-.arrow-left {
+.ArrowLeft {
    background: #251b55;
 }
-.arrow-down {
+.ArrowDown {
    background: #251b55;
 }
-.arrow-right {
+.ArrowRight {
    background: #251b55;
 }
 
