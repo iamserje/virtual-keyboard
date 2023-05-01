@@ -79,14 +79,7 @@ body {
    background: #8d79f3;
 }
 
-.hidden {
-   display: none;
-}
 
-.active {
-   box-shadow: none;
-   background: #8d79f3;
-}
 .Backquote {
    margin-left: 5px;
 }
@@ -108,6 +101,11 @@ body {
    margin-left: 5px;
    background: #251b55;
 }
+/* .CapsLockActive {
+
+   background: #8d79f3;
+} */
+
 .Enter {
    width: 150px;
    background: #251b55;
@@ -261,4 +259,12 @@ body {
    font-size: 24px;
    line-height: 1.1;
    color:#c37f7f;
+}
+.hidden {
+   display: none;
+}
+
+.active {
+   box-shadow: none;
+   background: #8d79f3;
 }

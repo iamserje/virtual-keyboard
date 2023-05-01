@@ -1,6 +1,13 @@
 import { createKeyboard } from "./create-keyboard.js";
 import { createPage } from "./create-page.js";
 let lang = 'en';
+let capsOnOf = 'off';
+let shiftOnOf = 'off';
+
+// Capsloc
+// if (ev.target.closest('.CapsLock')) {
+//    console.log(ev.getModifierState('CapsLock'))
+// };
 
 createPage(lang);
 
@@ -59,7 +66,11 @@ const keboard = document.querySelector('.keyboard');
 const textarea = document.querySelector('.textarea');
 keboard.addEventListener('click', function(ev) {
    textarea.focus();
-   if (ev.target.closest('.keyboard__key')) {
+   if (ev.target.closest('.keyboard__key') && !ev.target.closest('.ShiftLeft')) {
+      if (document.querySelector('.ShiftLeft').classList.contains('active')) {
+         document.querySelector('.ShiftLeft').classList.remove('active');
+         shiftOnOf = 'off';
+      }
       let key = ev.target.textContent;
       console.log(key)
       if (key.length === 1 && !(ev.target.closest('.ArrowLeft') || ev.target.closest('.ArrowUp') || ev.target.closest('.ArrowDown') || ev.target.closest('.ArrowRight'))) {
@@ -73,13 +84,13 @@ keboard.addEventListener('click', function(ev) {
       textarea.value = textarea.value.slice(0, -1);
    };
    if (ev.target.closest('.Tab')) {
-      ev.preventDefault();
-      textarea.value += '\t';
+      textarea.value += '    ';
+   };
+   if (ev.target.closest('.Space')) {
+      textarea.value += ' ';
    };
    if (ev.target.closest('.Del')) {
-      console.dir(ev.target);
       let karet = textarea.selectionStart;
-      console.log('a', karet);
       if (karet === 0) {
          textarea.value = textarea.value.slice(1);
          textarea.selectionStart = textarea.selectionEnd = 0;
@@ -94,5 +105,72 @@ keboard.addEventListener('click', function(ev) {
          textarea.selectionStart = textarea.selectionEnd = karet;
       }
    };
+   if (ev.target.closest('.ArrowLeft')) {
+      console.dir(ev.target);
+      let karet = textarea.selectionStart;
+      console.log('a', karet);
+      if (karet) {
+         textarea.selectionStart = textarea.selectionEnd = karet-1;
+      }
+   };
+   if (ev.target.closest('.ArrowRight')) {
+      console.dir(ev.target);
+      let karet = textarea.selectionStart;
+      console.log('a', karet);
+      textarea.selectionStart = textarea.selectionEnd = karet+1;
+
+   };
+
+   if (ev.target.closest('.ArrowUp')) {
+      let karetBefore = textarea.selectionStart;
+      let perenos = '';
+      if (textarea.value.indexOf('\n') != -1) {
+         perenos = textarea.value.lastIndexOf('\n', karetBefore-1);
+      };
+      textarea.selectionStart = textarea.selectionEnd = perenos ? perenos : karetBefore;
+   };
+
+   if (ev.target.closest('.ArrowDown')) {
+      let karetBefore = textarea.selectionStart;
+      let perenos = '';
+      if (textarea.value.indexOf('\n') != -1) {
+         perenos = textarea.value.indexOf('\n', karetBefore);
+      };
+      let pos = perenos + karetBefore;
+      console.log('textarea ', textarea.value.length);
+      console.log('perenos ',perenos);
+      console.log('karetBefore ', karetBefore);
+      console.log('pos', pos);
+
+      textarea.selectionStart = textarea.selectionEnd = perenos ? perenos + karetBefore+1 : karetBefore;
+   };
+   if (ev.target.closest('.CapsLock')) {
+      const caps = document.querySelector('.CapsLock');
+      if (caps.classList.contains('active')) {
+         caps.classList.remove('active');
+         capsOnOf = 'off';
+         console.log(capsOnOf);
+      } else {
+         caps.classList.add('active');
+         capsOnOf = 'on';
+         console.log(capsOnOf);
+      };
+   };
+   // todo for all shifts
+   if (ev.target.closest('.ShiftLeft')) {
+      const shift = document.querySelector('.ShiftLeft');
+      if (shift.classList.contains('active')) {
+         shift.classList.remove('active');
+         shiftOnOf = 'off';
+         console.log(shiftOnOf);
+      } else {
+         shift.classList.add('active');
+         shiftOnOf = 'on';
+         console.log(shiftOnOf);
+      };
+
+
+   };
+
 });
 
