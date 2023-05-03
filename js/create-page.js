@@ -3,6 +3,7 @@ import { createKeyboard } from "./create-keyboard.js";
 import { getLanguage } from "./what-lang.js";
 
 export function createPage(lang) {
+   document.body.innerHTML = '';
    const container = createComponent('div', {
       className: 'container'
    });
