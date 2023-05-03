@@ -35,63 +35,6 @@ export function createKeyboard(lang = 'en', layout = 'lower') {
             key.classList.add('AltRight');
          }
          row.append(key);
-         // if (i === 1 && j === 0) {
-         //    const tab = createKey(' tab', 'Tab');
-         //    row.prepend(tab);
-         // };
-         // if (i === 1 && j === keyboardTemplate[i].length-1) {
-         //    const del = createKey(' del', 'Del');
-         //    row.append(del);
-         // };
-         // if (i === 2 && j === 0) {
-         //    const capsLock = createKey(' capsLock', 'CapsLock');
-         //    row.prepend(capsLock);
-         // };
-         // if (i === 2 && j === keyboardTemplate[i].length-1) {
-         //    key.className += ' enter';
-         //    key.textContent = 'Enter';
-         // };
-         // if (i === 3 && j === 0) {
-         //    const shiftleft = createKey(' shift-left', 'Shift');
-         //    row.prepend(shiftleft);
-         // };
-         // if (i === 3 && j === keyboardTemplate[i].length-1) {
-         //    const arrowup = createKey(' arrow-up', '▲');
-         //    row.append(arrowup);
-         // };
-         // if (i === 3 && j === keyboardTemplate[i].length-1) {
-         //    const shiftright = createKey(' shift-right', 'Shift');
-         //    row.append(shiftright);
-         // };
-         // if (i === 4) {
-         //    const ctrlleft = createKey(' ctrl-left', 'Ctrl');
-         //    row.prepend(ctrlleft);
-         //    row.children[1].remove();
-
-         //    const win = createKey(' win', 'Win');
-         //    row.append(win);
-
-         //    const altLeft = createKey(' alt-left', 'Alt');
-         //    row.append(altLeft);
-
-         //    const spase = createKey(' space', ' ');
-         //    row.append(spase);
-
-         //    const altRight = createKey(' alt-right', 'Alt');
-         //    row.append(altRight);
-
-         //    const arrowleft = createKey(' arrow-left', '◄');
-         //    row.append(arrowleft);
-
-         //    const arrowdown = createKey(' arrow-down', '▼');
-         //    row.append(arrowdown);
-
-         //    const arrowright = createKey(' arrow-right', '►');
-         //    row.append(arrowright);
-
-         //    const ctrlright = createKey(' ctrl-right', 'Ctrl');
-         //    row.append(ctrlright);
-         // };
       };
       keyboard.append(row);
    };

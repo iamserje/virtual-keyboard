@@ -1,8 +1,7 @@
 import { createComponent } from "./create-element.js";
 import { createKeyboard } from "./create-keyboard.js";
-import { getLanguage } from "./what-lang.js";
 
-export function createPage(lang) {
+export function createPage(lang, layout) {
    document.body.innerHTML = '';
    const container = createComponent('div', {
       className: 'container'
@@ -20,7 +19,7 @@ export function createPage(lang) {
       rows: '10'
    });
 
-   const keyboardObject = createKeyboard(lang);
+   const keyboardObject = createKeyboard(lang, layout);
 
    const textOS = createComponent('p', {
       className: 'os',

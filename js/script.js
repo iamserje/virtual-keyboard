@@ -1,15 +1,8 @@
-import { createKeyboard } from "./create-keyboard.js";
 import { createPage } from "./create-page.js";
 let lang = 'en';
-let capsOnOf = 'off';
-let shiftOnOf = 'off';
+let rasklad = 'lower';
 
-// Capsloc
-// if (ev.target.closest('.CapsLock')) {
-//    console.log(ev.getModifierState('CapsLock'))
-// };
-
-createPage(lang);
+createPage(lang, rasklad);
 
 function changeLanguageMark() {
    // let flag = false;
@@ -28,8 +21,6 @@ function changeLanguageMark() {
    //          createPage(lang);
    //    }
    // });
-
-
    const codes = ['AltLeft', 'ControlLeft'];
    let pressed = new Set();
    document.addEventListener('keydown', function (ev) {
@@ -46,8 +37,8 @@ function changeLanguageMark() {
          lang = 'en';
       }
       console.log(lang);
-      createPage(lang);
-      workKeyboard()
+      createPage(lang, rasklad);
+      workKeyboard();
       console.log('klava', document.querySelector('.keyboard'));
    });
    document.addEventListener('keyup', function (ev) {
@@ -61,7 +52,7 @@ function workKeyboard() {
    // event to add to key ckass active for animate press action:
    document.addEventListener('keydown', function (ev) {
       let keyCod = ev.code ? ev.code : 'ShiftLeft';
-      console.log(keyCod)
+      console.log(keyCod);
       document.querySelector(`.${keyCod}`).classList.add('active');
       setTimeout(() => { document.querySelector(`.${keyCod}`).classList.remove('active'); }, 100)
    });
@@ -74,13 +65,13 @@ function workKeyboard() {
       if (ev.target.closest('.keyboard__key') && !ev.target.closest('.ShiftLeft')) {
          if (document.querySelector('.ShiftLeft').classList.contains('active')) {
             document.querySelector('.ShiftLeft').classList.remove('active');
-            shiftOnOf = 'off';
-         }
+            rasklad = 'lower';
+         };
          let key = ev.target.textContent;
          console.log(key)
          if (key.length === 1 && !(ev.target.closest('.ArrowLeft') || ev.target.closest('.ArrowUp') || ev.target.closest('.ArrowDown') || ev.target.closest('.ArrowRight'))) {
             textarea.value += key;
-         }
+         };
       }
       if (ev.target.closest('.Enter')) {
          textarea.value += '\n';
@@ -108,7 +99,7 @@ function workKeyboard() {
          } else {
             textarea.value = textarea.value.slice(0, karet) + textarea.value.slice(karet + 1);
             textarea.selectionStart = textarea.selectionEnd = karet;
-         }
+         };
       };
       if (ev.target.closest('.ArrowLeft')) {
          console.dir(ev.target);
@@ -116,14 +107,13 @@ function workKeyboard() {
          console.log('a', karet);
          if (karet) {
             textarea.selectionStart = textarea.selectionEnd = karet - 1;
-         }
+         };
       };
       if (ev.target.closest('.ArrowRight')) {
          console.dir(ev.target);
          let karet = textarea.selectionStart;
          console.log('a', karet);
          textarea.selectionStart = textarea.selectionEnd = karet + 1;
-
       };
 
       if (ev.target.closest('.ArrowUp')) {
@@ -146,19 +136,22 @@ function workKeyboard() {
          console.log('perenos ', perenos);
          console.log('karetBefore ', karetBefore);
          console.log('pos', pos);
-
          textarea.selectionStart = textarea.selectionEnd = perenos ? perenos + karetBefore + 1 : karetBefore;
       };
       if (ev.target.closest('.CapsLock')) {
          const caps = document.querySelector('.CapsLock');
          if (caps.classList.contains('active')) {
             caps.classList.remove('active');
-            capsOnOf = 'off';
-            console.log(capsOnOf);
+            rasklad = 'lower';
+            console.log(rasklad);
+            // createPage(lang, rasklad);
+            // workKeyboard();
          } else {
             caps.classList.add('active');
-            capsOnOf = 'on';
-            console.log(capsOnOf);
+            rasklad = 'capsMode';
+            console.log(rasklad);
+            // createPage(lang, rasklad);
+            // workKeyboard();
          };
       };
       // todo for all shifts
@@ -166,17 +159,18 @@ function workKeyboard() {
          const shift = document.querySelector('.ShiftLeft');
          if (shift.classList.contains('active')) {
             shift.classList.remove('active');
-            shiftOnOf = 'off';
-            console.log(shiftOnOf);
+            rasklad = 'lower';
+            console.log(rasklad);
+            // createPage(lang, rasklad);
+            // workKeyboard();
          } else {
             shift.classList.add('active');
-            shiftOnOf = 'on';
-            console.log(shiftOnOf);
+            rasklad = 'shiftMode';
+            console.log(rasklad);
+            // createPage(lang, rasklad);
+            // workKeyboard();
          };
-
-
       };
-
    });
 }
 workKeyboard();
