@@ -47,7 +47,7 @@ function changeLanguageMark() {
 }
 changeLanguageMark();
 
-
+// вот ниже функция обрабатывает и физ. и вирт. клавы. и все клавиши
 function workKeyboard() {
    // event to add to key ckass active for animate press action:
    document.addEventListener('keydown', function (ev) {
