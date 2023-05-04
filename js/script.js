@@ -1,8 +1,10 @@
-import { createPage } from "./create-page.js";
+import { createPage, renderKeyboard } from "./create-page.js";
 let lang = 'en';
 let rasklad = 'lower';
 
-createPage(lang, rasklad);
+createPage();
+renderKeyboard(lang, rasklad);
+
 
 function changeLanguageMark() {
    // let flag = false;
@@ -18,7 +20,7 @@ function changeLanguageMark() {
    //          lang = 'en';
    //       }
    //       console.log('lang of page: ', lang);
-   //          createPage(lang);
+   //          renderKeyboard(lang);
    //    }
    // });
    const codes = ['AltLeft', 'ControlLeft'];
@@ -37,7 +39,7 @@ function changeLanguageMark() {
          lang = 'en';
       }
       console.log(lang);
-      createPage(lang, rasklad);
+      renderKeyboard(lang, rasklad);
       workKeyboard();
       console.log('klava', document.querySelector('.keyboard'));
    });
@@ -143,14 +145,12 @@ function workKeyboard() {
          if (caps.classList.contains('active')) {
             caps.classList.remove('active');
             rasklad = 'lower';
-            console.log(rasklad);
-            // createPage(lang, rasklad);
+            // renderKeyboard(lang, rasklad);
             // workKeyboard();
          } else {
             caps.classList.add('active');
             rasklad = 'capsMode';
-            console.log(rasklad);
-            // createPage(lang, rasklad);
+            // renderKeyboard(lang, rasklad);
             // workKeyboard();
          };
       };
@@ -161,13 +161,13 @@ function workKeyboard() {
             shift.classList.remove('active');
             rasklad = 'lower';
             console.log(rasklad);
-            // createPage(lang, rasklad);
+            // renderKeyboard(lang, rasklad);
             // workKeyboard();
          } else {
             shift.classList.add('active');
             rasklad = 'shiftMode';
             console.log(rasklad);
-            // createPage(lang, rasklad);
+            // renderKeyboard(lang, rasklad);
             // workKeyboard();
          };
       };
